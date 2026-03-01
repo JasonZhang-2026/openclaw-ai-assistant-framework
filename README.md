@@ -56,16 +56,27 @@ OpenClaw AI Assistant Framework 是一个专业、高效、自主成长的AI助�
 
 框架采用时段化学习策略，根据不同时间段自动学习相关技能：
 
-### 前12小时（00:00-12:00）- 视觉创作时段 🎨
-- **00:00-04:00**：图像生成、提示词工程
-- **04:00-08:00**：视频制作、剪辑工具
-- **08:00-12:00**：视觉优化、设计工具
+### 前12小时（00:00-12:00）- 底层基建与研发洞察
+- **00:00-04:00**：生产自动化与新厂建设
+  学习目标：深度钻研食品生产的建设规范、食品生产自动化流水线改造方案以及IoT物联网在食品工厂的应用。
+  核心技能：CAD图纸解析、食品设备自动化选型、PLC控制与产线效率优化。
+- **04:00-08:00**：数字化系统与低代码集成
+  学习目标：精进飞书与简道云的API对接与高级工作流搭建，实现商贸侧与生产侧的数据无缝融通。
+  核心技能：简道云应用的搭建、食品生产企业的数字化管理系统的搭建、API集成逻辑、低代码架构设计、企业级业务流自动化部署。
+- **08:00-12:00**：食品深加工与产品研发
+  学习目标：追踪灰枣深加工、和红枣相关的药食同源产品的最前沿食品科学与快消品创新趋势。
+  核心技能：配方趋势分析、竞品风味拆解、食品工艺优化与延伸品类研发。
 
-### 后12小时（12:00-24:00）- 自媒体运营时段 📱
-- **12:00-16:00**：内容创作、文案写作
-- **16:00-20:00**：社交媒体、互动运营
+### 后12小时（12:00-24:00）- 经营管理与业务决策
+- **12:00-16:00**：企业管理与组织发展
+  学习目标：吸收先进的实战管理理念，提炼从目标拆解、过程管理到绩效落实的核心方法论。
+  核心技能：组织行为学、OKR/KPI管理体系、管理层赋能与团队文化建设。
+- **16:00-20:00**：供应链与多项目统筹
+  学习目标：学习快消品商贸的供应链优化，以及新厂建设进度管理和多线并发任务的统筹协同。
+  核心技能：供应链敏捷规划、多项目管理（PMP/敏捷）、风险控制与资源调度。
 - **20:00-24:00**：数据分析、自动化营销
-
+  学习目标：基于全量销售与生产数据，学习如何构建高管视角的经营驾驶舱，为高层决策提供穿透性的数据支撑。
+  核心技能：BI数据建模、财务指标拆解、商业预测与ROI归因分析。
 ---
 
 ## 🚀 快速开始
@@ -101,23 +112,23 @@ chmod +x install.sh
   "pools": {
     "fast": {
       "name": "高速池",
-      "primary": "zai/glm-4.7",
-      "fallback": "zai/glm-4.7"
+      "primary": "MiniMax-M2.5-highspeed",
+      "fallback": "MiniMax-M2.5-highspeed"
     },
     "smart": {
       "name": "智能池",
-      "primary": "zai/glm-5",
-      "fallback": "zai/glm-5"
+      "primary": "MiniMax-M2.5-highspeed",
+      "fallback": "MiniMax-M2.5-highspeed"
     },
     "text": {
       "name": "文本池",
-      "primary": "zai/glm-5",
-      "fallback": "zai/glm-4.7"
+      "primary": "MiniMax-M2.5-highspeed",
+      "fallback": "MiniMax-M2.5-highspeed"
     },
     "vision": {
       "name": "视觉池",
-      "primary": "zai/glm-4.6v",
-      "fallback": "zai/glm-4.6v"
+      "primary": "MiniMax-M2.5-highspeed",
+      "fallback": "MiniMax-M2.5-highspeed"
     }
   }
 }
@@ -130,12 +141,12 @@ chmod +x install.sh
 ```json
 {
   "hourly_rotation": {
-    "00-04": ["image", "prompt", "ai-art", "generation"],
-    "04-08": ["video", "editing", "production", "creative"],
-    "08-12": ["design", "graphics", "photo", "visual"],
-    "12-16": ["content", "writing", "copywriting", "blog"],
-    "16-20": ["social", "twitter", "weibo", "engagement"],
-    "20-24": ["analytics", "automation", "seo", "marketing"]
+    "00-04": ["cad-parsing", "food-equipment-automation", "plc-control", "iot-factory"],
+    "04-08": ["jiandaoyun", "feishu-api", "digital-management-system", "low-code-architecture", "workflow-automation"],
+    "08-12": ["gray-date-processing", "medicinal-edible-dates", "food-science", "recipe-innovation"],
+    "12-16": ["organizational-behavior", "okr-kpi", "leadership-empowerment", "team-culture"],
+    "16-20": ["fmcg-supply-chain", "factory-construction-management", "pmp-agile", "resource-scheduling"],
+    "20-24": ["data-analysis", "automated-marketing", "bi-modeling", "roi-analysis"]
   }
 }
 ```
